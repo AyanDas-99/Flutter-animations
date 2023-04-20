@@ -1,4 +1,9 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+
+import 'Screens/lecture1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,13 +17,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        brightness: Brightness.dark,
+        useMaterial3: true,
         primarySwatch: Colors.blue,
       ),
       initialRoute: '/',
       routes: {
-        '/':(context) => const MyHomePage(title: 'AnimatedSwitcher'),
-        
+        '/': (context) => const MyHomePage(title: 'Flutter Animations'),
+        'lec1/': (context) =>
+            const Lecture1(title: 'AnimateBuilder and Transform'),
       },
     );
   }
@@ -34,56 +43,55 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final allAssets = [
-    'assets/1677751434999.jpeg',
-    'assets/1681746373201.jpeg',
-    'assets/1677749490747.jpeg',
-    'assets/11.jpg'
-  ];
-  int current = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          AnimatedSwitcher(
-            duration: Duration(milliseconds: 500),
-            transitionBuilder: (child, Animation<double> animation) =>
-                FadeTransition(
-              opacity: animation,
-              child: child,
-            ),
-            child: Container(
-              key: UniqueKey(),
-              width: 300,
-              height: 300,
-              decoration: BoxDecoration(
-                  image:
-                      DecorationImage(image: AssetImage(allAssets[current]))),
-            ),
-          ),
-          IconButton(
-              onPressed: () {
-                if (current == 3) return null;
-                setState(() {
-                  current++;
-                });
-              },
-              icon: Icon(Icons.forward)),
-          IconButton(
-              onPressed: () {
-                if (current == 0) return null;
-                setState(() {
-                  current--;
-                });
-              },
-              icon: Icon(Icons.arrow_back)),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: GridView(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3, mainAxisSpacing: 10, crossAxisSpacing: 10),
+          children: [
+            Link(link: "lec1/", title: "AnimatedBuilder and Transform"),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class Link extends StatelessWidget {
+  final String link;
+  final String title;
+  Link({
+    Key? key,
+    required this.link,
+    required this.title,
+  }) : super(key: key);
+
+  Color background =
+      Colors.primaries[Random().nextInt(Colors.primaries.length)];
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () => Navigator.pushNamed(context, link),
+      child: Container(
+        decoration: BoxDecoration(
+            color: background, borderRadius: BorderRadius.circular(20)),
+        child: Center(
+            child: Text(
+          title,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: background.computeLuminance() > 0.5
+                  ? Colors.black
+                  : Colors.white),
+        )),
       ),
     );
   }
