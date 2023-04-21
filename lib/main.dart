@@ -1,6 +1,8 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:math';
 
+import 'package:animations/Screens/lecture2.dart';
+import 'package:animations/Screens/lecture3.dart';
 import 'package:flutter/material.dart';
 
 import 'Screens/lecture1.dart';
@@ -28,6 +30,11 @@ class MyApp extends StatelessWidget {
         '/': (context) => const MyHomePage(title: 'Flutter Animations'),
         'lec1/': (context) =>
             const Lecture1(title: 'AnimateBuilder and Transform'),
+        'lec2/': (context) => const Lecture2(
+              title: 'Chained Animations, curves and clippers',
+            ),
+        'lec3/': (context) =>
+            const Lecture3(title: "3D Animation, Stack and rotate widgets"),
       },
     );
   }
@@ -56,6 +63,11 @@ class _MyHomePageState extends State<MyHomePage> {
               crossAxisCount: 3, mainAxisSpacing: 10, crossAxisSpacing: 10),
           children: [
             Link(link: "lec1/", title: "AnimatedBuilder and Transform"),
+            Link(
+                link: "lec2/", title: "Chained Animation, curves and clippers"),
+            Link(
+                link: 'lec3/',
+                title: "3D Animations, Stack and rotate widgets"),
           ],
         ),
       ),
@@ -72,7 +84,7 @@ class Link extends StatelessWidget {
     required this.title,
   }) : super(key: key);
 
-  Color background =
+  final Color background =
       Colors.primaries[Random().nextInt(Colors.primaries.length)];
 
   @override

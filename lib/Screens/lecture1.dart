@@ -13,17 +13,17 @@ class Lecture1 extends StatefulWidget {
   State<Lecture1> createState() => _Lecture1State();
 }
 
-class _Lecture1State extends State<Lecture1>
-    with SingleTickerProviderStateMixin {
+class _Lecture1State extends State<Lecture1> with TickerProviderStateMixin {
   late AnimationController _controller;
   late Animation _animation;
 
   @override
   void initState() {
     _controller =
-        AnimationController(vsync: this, duration: Duration(seconds: 2));
+        AnimationController(vsync: this, duration: const Duration(seconds: 5));
     _animation =
         Tween<double>(begin: 0.0, end: math.pi * 2).animate(_controller);
+    _controller.repeat();
     super.initState();
   }
 
@@ -49,28 +49,24 @@ class _Lecture1State extends State<Lecture1>
                 ..rotateY(_animation.value)
                 ..rotateZ(_animation.value)
                 ..rotateX(_animation.value),
-              child: InkWell(
-                onTap: () {
-                  if (_controller.isAnimating) {
-                    _controller.stop();
-                  } else {
-                    _controller.repeat();
-                  }
-                },
-                child: Container(
-                  height: 100,
-                  width: 100,
-                  decoration: BoxDecoration(
-                      color: Colors.blue,
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Colors.black,
-                          blurRadius: 5,
-                          spreadRadius: 5,
-                        )
-                      ],
-                      borderRadius: BorderRadius.circular(10)),
-                ),
+              child: Container(
+                height: 100,
+                width: 100,
+                decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                        colors: [
+                          Colors.lightBlueAccent,
+                          Color.fromARGB(255, 19, 98, 163)
+                        ]),
+                    boxShadow: const [
+                      BoxShadow(
+                          color: Color.fromARGB(255, 151, 201, 246),
+                          blurRadius: 20,
+                          spreadRadius: 1),
+                    ],
+                    borderRadius: BorderRadius.circular(10)),
               ),
             );
           },
