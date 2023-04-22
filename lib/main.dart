@@ -3,6 +3,7 @@ import 'dart:math';
 
 import 'package:animations/Screens/lecture2.dart';
 import 'package:animations/Screens/lecture3.dart';
+import 'package:animations/Screens/lecture4.dart';
 import 'package:flutter/material.dart';
 
 import 'Screens/lecture1.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
             ),
         'lec3/': (context) =>
             const Lecture3(title: "3D Animation, Stack and rotate widgets"),
+        'lec4/': (context) => const Lecture4(title: "Hero Animation"),
       },
     );
   }
@@ -68,6 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Link(
                 link: 'lec3/',
                 title: "3D Animations, Stack and rotate widgets"),
+            Link(link: 'lec4/', title: 'Hero Animations'),
           ],
         ),
       ),
