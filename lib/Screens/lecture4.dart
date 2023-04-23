@@ -1,7 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class Person {
   final String name;
@@ -52,7 +50,7 @@ class _Lecture4State extends State<Lecture4> {
                 tag: person.name,
                 child: Text(
                   person.emoji,
-                  style: TextStyle(fontSize: 30),
+                  style: const TextStyle(fontSize: 30),
                 ),
               ),
               title: Text(person.name),
@@ -82,28 +80,26 @@ class Details extends StatelessWidget {
               case HeroFlightDirection.push:
                 return Material(
                     color: Colors.transparent, child: fromHeroContext.widget);
-                break;
               case HeroFlightDirection.pop:
                 return Material(
                     color: Colors.transparent, child: toHeroContext.widget);
-                break;
             }
           },
           tag: person.name,
           child: Text(
             person.emoji,
-            style: TextStyle(fontSize: 40),
+            style: const TextStyle(fontSize: 40),
           ),
         ),
       ),
       body: Center(
           child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Text(person.name),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Text("${person.age} years old")

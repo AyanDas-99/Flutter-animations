@@ -26,13 +26,13 @@ class _Lecture3State extends State<Lecture3> with TickerProviderStateMixin {
     super.initState();
 
     _xController =
-        AnimationController(vsync: this, duration: Duration(seconds: 10));
+        AnimationController(vsync: this, duration: const Duration(seconds: 10));
 
     _yController =
-        AnimationController(vsync: this, duration: Duration(seconds: 15));
+        AnimationController(vsync: this, duration: const Duration(seconds: 15));
 
     _zController =
-        AnimationController(vsync: this, duration: Duration(seconds: 20));
+        AnimationController(vsync: this, duration: const Duration(seconds: 20));
 
     _animation = Tween<double>(begin: 0, end: pi * 2);
   }
@@ -81,7 +81,7 @@ class _Lecture3State extends State<Lecture3> with TickerProviderStateMixin {
                   child: Container(
                     height: 100,
                     width: 100,
-                    color: Color.fromARGB(255, 93, 171, 236),
+                    color: const Color.fromARGB(255, 93, 171, 236),
                   ),
                 ),
 
@@ -92,7 +92,7 @@ class _Lecture3State extends State<Lecture3> with TickerProviderStateMixin {
                     child: Container(
                       height: 100,
                       width: 100,
-                      color: Color.fromARGB(255, 98, 176, 240),
+                      color: const Color.fromARGB(255, 98, 176, 240),
                     )),
 
                 // Right Side
@@ -102,7 +102,7 @@ class _Lecture3State extends State<Lecture3> with TickerProviderStateMixin {
                     child: Container(
                       height: 100,
                       width: 100,
-                      color: Color.fromARGB(255, 77, 144, 199),
+                      color: const Color.fromARGB(255, 77, 144, 199),
                     )),
 
                 // Top Side
@@ -112,7 +112,7 @@ class _Lecture3State extends State<Lecture3> with TickerProviderStateMixin {
                     child: Container(
                       height: 100,
                       width: 100,
-                      color: Color.fromARGB(255, 111, 190, 255),
+                      color: const Color.fromARGB(255, 111, 190, 255),
                     )),
 
                 // Top Side
@@ -122,14 +122,14 @@ class _Lecture3State extends State<Lecture3> with TickerProviderStateMixin {
                     child: Container(
                       height: 100,
                       width: 100,
-                      color: Color.fromARGB(255, 52, 157, 243),
+                      color: const Color.fromARGB(255, 52, 157, 243),
                     )),
 
                 // Front
                 Container(
                   height: 100,
                   width: 100,
-                  color: Color.fromARGB(255, 114, 185, 247),
+                  color: const Color.fromARGB(255, 114, 185, 247),
                 ),
               ],
             ),
