@@ -1,16 +1,33 @@
-# animations
+# Flutter Animations
 
-A new Flutter project.
+### Each Screen shows a simple animation which uses one basic flutter animation principle
 
-## Getting Started
+## How to get started
 
-This project is a starting point for a Flutter application.
+- Clone this repository to your local machine
 
-A few resources to get you started if this is your first Flutter project:
+  `git clone git@github.com:AyanDas-99/Flutter-animations.git`
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Move to the project folder
+- Run this command to install the reuqired packages
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  ` flutter pub get`
+
+- Run this command to start the application
+
+  `flutter run`
+
+## Referring
+
+On startup, you are presented with this screen from where you can choose one animation
+
+Each file inside
+` lib/Screens/` has the code of the animations in each card, based on the index of the card you choose.
+
+## Contributions
+
+You can contribute with new animations by following the steps below:
+
+1. Create a file named
+   `lecture{lecture_number}.dart` in the
+   `lib/Screens/` folder, where {lecture_number} is the number after the last animation is.
