@@ -32,11 +32,14 @@ class _Lecture5State extends State<Lecture5> {
           child: AnimatedContainer(
             curve: Curves.fastOutSlowIn,
             duration: const Duration(milliseconds: 400),
-            height: zoomed ? 100 : 400,
-            width: zoomed ? 100 : 400,
+            height: zoomed ? 400 : 100,
+            width: zoomed ? 400 : 100,
             color: zoomed ? Colors.purple : Colors.blue,
             transformAlignment: Alignment.center,
-            transform: Matrix4.identity()..rotateZ(zoomed ? 0 : pi / 2),
+            transform: Matrix4.identity()..rotateZ(zoomed ? pi : 0),
+            child: Center(
+              child: Text(zoomed ? "Zoom Out" : "Zoom In"),
+            ),
           ),
         ),
       ),
