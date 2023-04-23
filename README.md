@@ -21,6 +21,9 @@
 
 On startup, you are presented with this screen from where you can choose one animation
 
+![Screenshot from 2023-04-23 12-44-12](https://user-images.githubusercontent.com/86493736/233825559-3ca7b024-f3f0-419d-b58d-1dd3a65d7eca.png)
+
+
 Each file inside
 ` lib/Screens/` has the code of the animations in each card, based on the index of the card you choose.
 
