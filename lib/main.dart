@@ -6,6 +6,7 @@ import 'package:animations/Screens/lecture3.dart';
 import 'package:animations/Screens/lecture4.dart';
 import 'package:animations/Screens/lecture5.dart';
 import 'package:animations/Screens/lecture6.dart';
+import 'package:animations/Screens/practice1.dart';
 import 'package:flutter/material.dart';
 
 import 'Screens/lecture1.dart';
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget {
         'lec4/': (context) => const Lecture4(title: "Hero Animation"),
         'lec5/': (context) => const Lecture5(title: "Implicit Animations"),
         'lec6/': (context) => const Lecture6(title: "TweenAnimationBuilder"),
+        'practice1/': (context) => const Practice1(),
       },
     );
   }
@@ -79,6 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Link(
                 link: 'lec6/',
                 title: 'TweenAnimationBuilder, ClipPath, CustomClipper'),
+            Link(link: 'practice1/', title: "Practice 1")
           ],
         ),
       ),
