@@ -10,6 +10,7 @@ import 'package:animations/Screens/practice1.dart';
 import 'package:flutter/material.dart';
 
 import 'Screens/lecture1.dart';
+import 'Screens/lecture7.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,6 +44,7 @@ class MyApp extends StatelessWidget {
         'lec5/': (context) => const Lecture5(title: "Implicit Animations"),
         'lec6/': (context) => const Lecture6(title: "TweenAnimationBuilder"),
         'practice1/': (context) => const Practice1(),
+        'lec7/': (context) => const Lecture7(title: "CustomPainter & Polygons"),
       },
     );
   }
@@ -81,7 +83,8 @@ class _MyHomePageState extends State<MyHomePage> {
             Link(
                 link: 'lec6/',
                 title: 'TweenAnimationBuilder, ClipPath, CustomClipper'),
-            Link(link: 'practice1/', title: "Practice 1")
+            Link(link: 'practice1/', title: "Practice 1"),
+            Link(link: 'lec7/', title: "CustomPainter & Polygons"),
           ],
         ),
       ),
