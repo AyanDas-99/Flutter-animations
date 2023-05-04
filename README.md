@@ -21,7 +21,7 @@
 
 On startup, you are presented with this screen from where you can choose one animation
 
-![Screenshot from 2023-04-23 12-44-12](https://user-images.githubusercontent.com/86493736/233825559-3ca7b024-f3f0-419d-b58d-1dd3a65d7eca.png)
+![Screenshot from 2023-05-04 22-24-19](https://user-images.githubusercontent.com/86493736/236273146-e5a8c9e4-9b67-4f7e-84d7-ff765c53a1ba.png)
 
 
 Each file inside
@@ -31,6 +31,8 @@ Each file inside
 
 You can contribute with new animations by following the steps below:
 
-1. Create a file named
-   `lecture{lecture_number}.dart` in the
-   `lib/Screens/` folder, where {lecture_number} is the number after the last animation is.
+1. Create a new file with the animation in the `lib/screens/` folder.
+2. In the `main.dart` file, add a new route to the file.
+3. In the `main.dart` file, add a `Link()` widget to the `GridView()`
+
+#### Please create a new branch before submitting a PR
