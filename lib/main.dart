@@ -6,6 +6,8 @@ import 'package:animations/Screens/lecture3.dart';
 import 'package:animations/Screens/lecture4.dart';
 import 'package:animations/Screens/lecture5.dart';
 import 'package:animations/Screens/lecture6.dart';
+import 'package:animations/Screens/lecture8.dart';
+import 'package:animations/Screens/lecture9.dart';
 import 'package:animations/Screens/practice1.dart';
 import 'package:flutter/material.dart';
 
@@ -45,6 +47,10 @@ class MyApp extends StatelessWidget {
         'lec6/': (context) => const Lecture6(title: "TweenAnimationBuilder"),
         'practice1/': (context) => const Practice1(),
         'lec7/': (context) => const Lecture7(title: "CustomPainter & Polygons"),
+        'lec8/': (context) => const Lecture8(title: "3D Drawer"),
+        'lec9/': (context) => const Lecture9(
+              title: "Animated Prompt",
+            )
       },
     );
   }
@@ -85,6 +91,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 title: 'TweenAnimationBuilder, ClipPath, CustomClipper'),
             Link(link: 'practice1/', title: "Practice 1"),
             Link(link: 'lec7/', title: "CustomPainter & Polygons"),
+            Link(link: 'lec8/', title: "3D Drawer"),
+            Link(link: 'lec9/', title: "Animated Prompt"),
           ],
         ),
       ),
