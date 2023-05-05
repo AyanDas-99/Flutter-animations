@@ -9,6 +9,7 @@ import 'package:animations/Screens/lecture6.dart';
 import 'package:animations/Screens/lecture8.dart';
 import 'package:animations/Screens/lecture9.dart';
 import 'package:animations/Screens/practice1.dart';
+import 'package:animations/Screens/practice2.dart';
 import 'package:flutter/material.dart';
 
 import 'Screens/lecture1.dart';
@@ -50,7 +51,8 @@ class MyApp extends StatelessWidget {
         'lec8/': (context) => const Lecture8(title: "3D Drawer"),
         'lec9/': (context) => const Lecture9(
               title: "Animated Prompt",
-            )
+            ),
+        'practice2/': (context) => const Practice2(title: "Radial Menu"),
       },
     );
   }
@@ -93,6 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Link(link: 'lec7/', title: "CustomPainter & Polygons"),
             Link(link: 'lec8/', title: "3D Drawer"),
             Link(link: 'lec9/', title: "Animated Prompt"),
+            Link(link: 'practice2/', title: "Radial Menu")
           ],
         ),
       ),
